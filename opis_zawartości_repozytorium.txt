@@ -28,9 +28,15 @@ gotowe, już wygenerowane raporty dla obu zestawów testów znajdują się w kat
 2. fixtures jest wykorzystane do podstawienia danych do pierwszego zestawu testów (KalkulatorBMI)
    dane znajdują się w pliku testdata.json w katalogu /fixtures
 
-3. id projektu dla dashboard'u jest skonfigurowane w cypress.json linia 2
+3. klasy Page Object Pattern znajdują się w pliku support/PageObjects/selectorsPage.js 
+   Page Object Pattern jest wykorzystany do podstawiania selektorów '.wzrost' i '.waga' 
+   w pierwszym zestawie testów (KalkulatorBMI)
 
-   polecenie uruchamiające nagrywanie do dashboardu: npx cypress run --record --key 73d61b19-b6ec-46c1-b071-3ff308d8362f
+   1-zestaw_kalkulator.spec.js zawiera linie inicjujące wykorzystanie selectorsPage.js w testach:
+    import SelectorsPage from '../../support/PageObjects/selectorsPage';
+    const selectorsPage = new SelectorsPage();
+
+4. id projektu dla dashboard'u jest skonfigurowane w cypress.json linia 2
 
    adres publiczny dashboardu: https://dashboard.cypress.io/projects/xnvr3g/
 
