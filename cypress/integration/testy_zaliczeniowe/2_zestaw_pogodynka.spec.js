@@ -9,7 +9,7 @@ context('Entering selected app, and tests its functionality', () => {
         cy.viewport(1280, 1024);
       })
     
-        it('test_2.1_what_contains_address_field_and_first_response', ()=>{
+        it('test_2.1_what_contains_address_field_and_first_response', ()=> {
             cy.url().should('contain', 'https://leszsur.github.io/Pogodynka/');
             cy.get('#naglowek').should('include.text', 'Pogoda aktualna - Białystok');
 
